@@ -37,4 +37,6 @@ function sumList(list_1, list_2) {
   return outputList.print();
 }
 
+// Try recursion. Suppose you have two lists, A = 1->5-> 9 (representing 951) and B =2->3->6 - ?7 (representing 7632), and a function that operates on the remainder of thelists (5->9 and 3->6->7). Could you use this to create the sum method? What is therelationship between sum(l->5->9 j 2->3->6->7 ) and sum(5->9, 3->6 - >7)?
+
 sumList(list_1, list_2);
