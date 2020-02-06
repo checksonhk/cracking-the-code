@@ -5,25 +5,27 @@ const test = new LinkedList.LinkedList();
 test.add(3);
 test.add(5);
 test.add(8);
+test.add(5);
 test.add(10);
 test.add(2);
 test.add(1);
 test.print();
 
 function partition(list, value) {
-  let mainPtr = list.head;
-  let fastPtr = list.head;
-
-  while (fastPtr) {
-    if (fastPtr.element < value) {
-      mainPtr = fastPtr;
-      fastPtr = fastPtr.next;
-    } else {
-      mainPtr = mainPtr.next;
-      fastPtr = fastPtr.next;
-    }
+  const beforeVal = new LinkedList.LinkedList();
+  const afterVal = new LinkedList.LinkedList();
+  let current = list.head;
+  while (current) {
+    if (current.element >= value) afterVal.add(current.element);
+    else beforeVal.add(current.element);
+    current = current.next;
   }
-  return list.print();
+  let p2 = afterVal.head;
+  while (p2) {
+    beforeVal.add(p2.element);
+    p2 = p2.next;
+  }
+  return beforeVal.print();
 }
 
 console.log(partition(test, 5));
