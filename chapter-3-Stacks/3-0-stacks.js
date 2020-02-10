@@ -1,3 +1,5 @@
+// LIFO - Last In First Out
+
 class Stack {
   constructor() {
     this.data = [];
