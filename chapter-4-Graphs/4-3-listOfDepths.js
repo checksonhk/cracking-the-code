@@ -25,6 +25,7 @@ class Node {
   }
 }
 
+// BFS Method
 function levelOrder(root) {
   const output = [];
   const temp = [];
