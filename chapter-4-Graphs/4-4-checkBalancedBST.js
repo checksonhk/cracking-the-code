@@ -52,7 +52,7 @@ function checkBalance(root) {
 }
 
 function differenceOf(value1, value2, diffence) {
-  return value1 == value2 + diffence || value1 + diffence == value2 ? true : false;
+  return Math.abs(value1 - value2) <= diffence ? true : false;
 }
 
 const node7 = new Node(7);
