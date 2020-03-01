@@ -7,7 +7,7 @@ class Node {
   }
 }
 
-e\class RandomBinarySearchTree {
+class RandomBinarySearchTree {
   constructor() {
     this.root = null;
   }
