@@ -127,3 +127,12 @@ class CallCentre {
     }
   }
 }
+
+class Respondent extends Employee {
+  finishCall(handled = true) {
+    super().finishCall(handled);
+    this.callcenter.routeRespondent(this);
+  }
+}
+
+class Manager extends Employee {}
