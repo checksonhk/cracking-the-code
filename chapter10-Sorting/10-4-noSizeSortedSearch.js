@@ -14,9 +14,9 @@ function bsearch(array, left, right, target) {
   const mid = Math.floor((left + right) / 2);
   if (mid < 0) return -1;
   if (array[mid] < target) {
-    bsearch(array, mid + 1, right, target);
+    return bsearch(array, mid + 1, right, target);
   } else if (array[mid] < target) {
-    bsearch(array, left, mid, target);
+    return bsearch(array, left, mid, target);
   } else return mid;
 }
 
